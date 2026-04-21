@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+background-attachment: fixed;
+color: #34495e;
+margin: 0;
+padding: 0;
+}
+
+.navbar {
+background: linear-gradient(90deg, #0f2027 0%, #203a43 100%) !important;
+transition: all 0.3s ease;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+color: #ecf0f1 !important;
+transition: color 0.3s ease, transform 0.3s ease;
+margin: 0 10px;
+}
+
+.nav-link:hover {
+color: #f39c12 !important;
+transform: scale(1.1);
+}
+
+section {
+padding: 80px 0;
+}
+
+.card {
+background: #ffffff;
+border: 1px solid #e1e8ed;
+color: #2c3e50;
+backdrop-filter: none;
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+border-radius: 15px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+color: #2c3e50;
+}
+
+.card:hover {
+transform: translateY(-10px) scale(1.02);
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+height: 450px;
+object-fit: cover;
+border-radius: 20px;
+}
+
+.carousel {
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+font-weight: 700;
+margin-bottom: 40px;
+text-align: center;
+position: relative;
+color: #1a237e;
+}
+
+.section-title::after {
+content: '';
+display: block;
+width: 60px;
+height: 4px;
+background: #d35400;
+margin: 10px auto;
+border-radius: 2px;
+}
+
+.bg-black.bg-opacity-25 {
+background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+.map-container {
+height: 350px;
+border-radius: 15px;
+overflow: hidden;
+border: 2px solid #e1e8ed;
+}
+
+footer {
+background: #0f2027;
+padding: 40px 0;
+margin-top: 50px;
+color: #ecf0f1 !important;
+}
+
+.gear-list li {
+list-style: none;
+padding: 8px 0;
+border-bottom: 1px solid #f1f1f1;
+color: #5d6d7e;
+}
+
+.gear-list li i {
+color: #e67e22;
+margin-right: 10px;
+}
+
+.text-info {
+color: #2980b9 !important;
+}
+
+.smooth-transition {
+transition: all 0.4s ease;
+}
