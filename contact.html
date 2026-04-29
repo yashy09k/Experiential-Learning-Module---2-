@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -17,19 +18,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">🏠 Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="about.html">ℹ️ About</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="photos.html">📸 Photos</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active" href="contact.html">📞 Contact</a>
-    </li>
-</ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">🏠 Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ℹ️ About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="photos.html">📸 Photos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">📞 Contact</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -65,7 +66,7 @@
                             <i class="fas fa-map-marker-alt fa-2x text-info me-3"></i>
                             <div>
                                 <h6 class="mb-0">Location</h6>
-                                <span>Nagpur, Maharashtra</span>
+                                <span>Diamond Nagar, Nagpur, Maharashtra</span>
                             </div>
                         </div>
                     </div>
@@ -84,18 +85,26 @@
                 <div class="card h-100 p-4">
                     <h3 class="mb-3">Find Me on the Map</h3>
                     <p class="small text-muted mb-3">
-                        Explore the location in Nagpur, Maharashtra where many of these frames were envisioned.
+                        Explore the location in Diamond Nagar, Nagpur where many of these frames were envisioned.
                     </p>
-                    <div id="map" class="map-container mb-3"></div>
+
+                    <!-- Google Maps embed for Diamond Nagar, Nagpur -->
+                    <div class="map-container mb-3">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7474.785570838513!2d79.0685!3d21.1515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0c3f4e8f3c9%3A0x3a1ffd7f9c9d8f99!2sDiamond%20Nagar%2C%20Nagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000001"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
                     <div class="d-flex flex-wrap gap-2">
-                        <!-- Open in Google Maps -->
-                        <a href="https://www.google.com/maps/search/?api=1&query=Nagpur%2C+Maharashtra"
+                        <!-- Open in Google Maps (Diamond Nagar) -->
+                        <a href="https://www.google.com/maps/search/?api=1&query=Diamond+Nagar%2C+Nagpur%2C+Maharashtra"
                            target="_blank"
                            class="btn btn-sm btn-outline-primary smooth-transition">
                             <i class="fas fa-external-link-alt me-2"></i>Open in Google Maps
                         </a>
-                        <!-- Get Directions -->
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=Nagpur%2C+Maharashtra"
+                        <!-- Get Directions (Diamond Nagar) -->
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Diamond+Nagar%2C+Nagpur%2C+Maharashtra"
                            target="_blank"
                            class="btn btn-sm btn-primary smooth-transition">
                             <i class="fas fa-location-arrow me-2"></i>Get Directions
@@ -133,25 +142,6 @@
     </div>
 </footer>
 
-<!-- Google Maps JS API (add your key) -->
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap">
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-// Initialize map centered on Nagpur
-function initMap() {
-    const nagpur = { lat: 21.1458, lng: 79.0882 };
-    const map = new google.maps.Map(document.getElementById('map'), {
-        center: nagpur,
-        zoom: 12
-    });
-    new google.maps.Marker({
-        position: nagpur,
-        map: map,
-        title: 'Nagpur, Maharashtra'
-    });
-}
-</script>
 </body>
 </html>
