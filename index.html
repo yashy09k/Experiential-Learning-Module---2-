@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon (optional, if you have favicon.png in repo root) -->
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -16,20 +18,20 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-           <ul class="navbar-nav ms-auto">
-    <li class="nav-item">
-        <a class="nav-link active" href="index.html">🏠 Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="about.html">ℹ️ About</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="photos.html">📸 Photos</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="contact.html">📞 Contact</a>
-    </li>
-</ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">🏠 Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ℹ️ About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="photos.html">📸 Photos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">📞 Contact</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -76,7 +78,7 @@
     </div>
 </section>
 
-<!-- WEATHER (new) -->
+<!-- WEATHER (static sample, no API) -->
 <section id="weather">
     <div class="container">
         <h2 class="section-title">Current Weather</h2>
@@ -87,10 +89,13 @@
                         <i class="fas fa-cloud-sun text-info me-2"></i>
                         Weather in Nagpur
                     </h3>
-                    <p class="mb-1 small text-muted">Live data from OpenWeatherMap</p>
+                    <p class="mb-1 small text-muted">Sample weather data (static)</p>
                     <hr class="bg-light">
                     <div id="weatherContent">
-                        <p class="mb-2">Loading current weather...</p>
+                        <h4 class="display-6 mb-2">32°C</h4>
+                        <p class="lead mb-1">Clear Sky</p>
+                        <p class="small text-muted mb-2">Feels like 34°C</p>
+                        <p class="small text-muted mb-0">Example weather for Nagpur, Maharashtra</p>
                     </div>
                 </div>
             </div>
@@ -125,36 +130,5 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-// OpenWeatherMap - current weather for Nagpur
-const weatherApiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
-const weatherUrl =
-    `https://api.openweathermap.org/data/2.5/weather?q=Nagpur,IN&units=metric&appid=${weatherApiKey}`;
-
-fetch(weatherUrl)
-    .then(response => response.json())
-    .then(data => {
-        const content = document.getElementById('weatherContent');
-        if (data.cod !== 200) {
-            content.innerHTML = '<p class="text-danger mb-0">Unable to load weather data.</p>';
-            return;
-        }
-        const temp = Math.round(data.main.temp);
-        const feels = Math.round(data.main.feels_like);
-        const condition = data.weather[0].main;
-        const description = data.weather[0].description;
-
-        content.innerHTML = `
-            <h4 class="display-6 mb-2">${temp}°C</h4>
-            <p class="lead mb-1">${condition}</p>
-            <p class="small text-muted mb-2">Feels like ${feels}°C</p>
-            <p class="small text-muted text-capitalize mb-0">${description}</p>
-        `;
-    })
-    .catch(() => {
-        const content = document.getElementById('weatherContent');
-        content.innerHTML = '<p class="text-danger mb-0">Unable to load weather data.</p>';
-    });
-</script>
 </body>
 </html>
